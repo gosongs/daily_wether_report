@@ -14,7 +14,7 @@ config = {
     },
     {
       name: 'vikki',
-      email: 'viki.yang@coolpad.com',
+      email: '83823009@qq.com',
       city: '上海',
       phone: 15800651893
     }
