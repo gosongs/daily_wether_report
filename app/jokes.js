@@ -30,8 +30,10 @@ config.userList.map((_, i) => {
 async.mapLimit(urls, 1, function (url, callback) {
   fetchJokes(url, callback);
 }, function (err, res) {
-  console.log('Final:');
-  console.log(jokesData.length);
+  jokesData.sort(function (a, b) {
+    return b.likes - a.likes;
+  });
+  jokesData = jokesData.slice(0, 10);
   sendEmail();
 })
 
@@ -47,9 +49,12 @@ function fetchJokes(url, callback) {
       $('#content-left>div').each((i, _) => {
         const $el = $(_);
         let joke = {};
-        joke.author = $el.find('.author h2').text();
-        joke.content = $el.find('.content>span').text();
-        jokesData.push(joke);
+        if (!$el.find('.content .contentForAll').length) { // 刨除需要查看全文的笑话
+          joke.author = $el.find('.author h2').text();
+          joke.content = $el.find('.content>span').text();
+          joke.likes = $el.find('.stats-vote .number').text();
+          jokesData.push(joke);
+        }
       });
       console.log(`当前: ${url}`);
       callback(null, url);
