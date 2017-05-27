@@ -5,6 +5,7 @@ var shelljs = require('shelljs');
 var jokeTask = schedule.scheduleJob('00 * * * *', fireJoke);
 var wetherTask = schedule.scheduleJob('00 00 08 * * *', fireWether);
 
+console.log('开始监控...')
 function fireJoke() {
   shelljs.exec('node app/jokes.js');
 }
