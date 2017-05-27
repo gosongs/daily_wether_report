@@ -3,10 +3,10 @@ var moment = require('moment');
 var shelljs = require('shelljs');
 var moment = require('moment');
 
-var jokeTask = schedule.scheduleJob('28 * * * *', fireJoke);
+var jokeTask = schedule.scheduleJob('31 * * * *', fireJoke);
 
 var wetherTask = schedule.scheduleJob('00 00 08 * * *', fireWether);
-var secondsTask = schedule.scheduleJob('* * * * * *', fireSeconds);
+// var secondsTask = schedule.scheduleJob('* * * * * *', fireSeconds);
 
 console.log('开始监控...')
 function fireJoke() {

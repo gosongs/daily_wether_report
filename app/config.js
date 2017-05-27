@@ -17,6 +17,12 @@ config = {
       email: '83823009@qq.com',
       city: '上海',
       phone: 15800651893
+    },
+    {
+      name: '熹俊',
+      email: '260520801@qq.com',
+      city: '上海',
+      phone: 15800651893
     }
   ]
 };
