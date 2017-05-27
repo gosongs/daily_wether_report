@@ -1,0 +1,14 @@
+var schedule = require('node-schedule');
+var moment = require('moment');
+var shelljs = require('shelljs');
+
+var jokeTask = schedule.scheduleJob('00 * * * *', fireJoke);
+var wetherTask = schedule.scheduleJob('00 00 08 * * *', fireWether);
+
+function fireJoke() {
+  shelljs.exec('node app/jokes.js');
+}
+
+function fireWether() {
+  shelljs.exec('node app/wether.js');
+}
