@@ -2,7 +2,7 @@ var schedule = require('node-schedule');
 var moment = require('moment');
 var shelljs = require('shelljs');
 
-var jokeTask = schedule.scheduleJob('23 * * * *', fireJoke);
+var jokeTask = schedule.scheduleJob('* * 1 * *', fireJoke);
 var wetherTask = schedule.scheduleJob('00 00 08 * * *', fireWether);
 
 console.log('开始监控...')
