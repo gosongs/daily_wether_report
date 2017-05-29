@@ -7,12 +7,6 @@ config = {
       phone: 15800651893
     },
     {
-      name: 'xigua',
-      email: '527386306@qq.com',
-      city: '青岛',
-      phone: 15800651893
-    },
-    {
       name: 'vikki',
       email: '83823009@qq.com',
       city: '上海',

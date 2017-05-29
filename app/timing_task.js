@@ -3,15 +3,15 @@ var moment = require('moment');
 var shelljs = require('shelljs');
 var moment = require('moment');
 
-var jokeTask = schedule.scheduleJob('0 18 * * *', fireJoke);
+var jokeTask = schedule.scheduleJob('0 20 17 * * *', fireJoke);
 
-var wetherTask = schedule.scheduleJob('0 08 * * *', fireWether);
+var wetherTask = schedule.scheduleJob('0 0 8 * * *', fireWether);
 // var secondsTask = schedule.scheduleJob('* * * * * *', fireSeconds);
 
 console.log('开始监控...')
 function fireJoke() {
-  // console.log('joke')
-  shelljs.exec('node app/jokes.js');
+  console.log('joke')
+  // shelljs.exec('node app/jokes.js');
 }
 
 function fireWether() {
