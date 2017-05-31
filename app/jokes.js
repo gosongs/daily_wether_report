@@ -34,7 +34,6 @@ async.mapLimit(urls, 1, function (url, callback) {
     return b.likes - a.likes;
   });
   jokesData = jokesData.slice(0, 10);
-  console.log(jokesData)
   sendEmail();
 })
 
