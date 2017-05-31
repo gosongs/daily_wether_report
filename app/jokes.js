@@ -13,7 +13,7 @@ var urls = [];
 var emails = [];
 var EMAIL = {
   host: 'smtp.163.com',
-  port: 25,
+  port: 465,
   auth: {
     user: 'by_openwater@163.com',
     pass: 'liuzhiyuan1993'
