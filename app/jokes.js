@@ -35,7 +35,7 @@ async.mapLimit(urls, 1, function (url, callback) {
   });
   jokesData = jokesData.slice(0, 10);
   sendEmail();
-})
+});
 
 function fetchJokes(url, callback) {
   request({
@@ -89,6 +89,7 @@ function fireEmail(email, callback) {
   var transporter = nodemailer.createTransport(EMAIL);
   transporter.sendMail(data, function (error, info) {
     if (error) {
+      console.log(error);
       console.log('Mail Error: ' + email);
     } else {
       console.log('Mail Success: ' + email);
